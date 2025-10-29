@@ -1,13 +1,13 @@
 # 🎮 Breakout Game
 
-Juego clásico de Breakout desarrollado con HTML5 Canvas y JavaScript vanilla.
+Juego clásico de Breakout desarrollado con HTML5 Canvas y JavaScript 
 
 ## ✨ Características
 
 ### 🎯 Jugabilidad
 - **Control dual**: Usa las flechas del teclado (← →) o el mouse para mover la paleta
 - **Sistema de niveles**: Dificultad progresiva con más filas de bloques
-- **Sistema de vidas**: 3 vidas para completar cada nivel
+- **Sistema de vidas**: 3 vidas 
 - **Física realista**: Ángulo de rebote basado en el punto de impacto en la paleta
 
 ### 🎨 Visual
@@ -18,13 +18,11 @@ Juego clásico de Breakout desarrollado con HTML5 Canvas y JavaScript vanilla.
 
 ### 🔊 Audio
 - **Música de fondo** en loop durante el juego
-- **3 sonidos aleatorios** al romper bloques (80% probabilidad)
-- **Sonido de Game Over** cuando pierdes todas las vidas
-- **Sonido de Victoria** al completar un nivel
+- **3 sonidos aleatorios** al romper bloques 
 
 ### 💾 Persistencia
 - **localStorage** para guardar mejor puntaje
-- **Auto-guardado** del progreso actual (puntaje, nivel, vidas)
+- **Auto-guardado** del progreso actual 
 - **Opción de continuar** partida guardada al recargar
 - **Botón para borrar datos** en pantalla de inicio
 
@@ -82,6 +80,3 @@ Puedes ajustar fácilmente:
 - Probabilidad de sonidos en `reproducirSonidoRotura()`
 - Apariencia del fondo en la función `dibujarFondo()`
 
----
-
-Desarrollado con ❤️ usando HTML5 Canvas
