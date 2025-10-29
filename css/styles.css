@@ -1,0 +1,173 @@
+/* Variables globales de color y diseño */
+:root {
+    --color-fondo-principal: #111018;
+    --color-fondo-secundario: #151419;
+    --color-acento: #1aff00;
+    --color-acento-hover: #0442fa;
+    --color-texto: #ffffff;
+    --color-sombra: rgba(255, 0, 0, 0.575);
+    --radio-borde: 12px;
+}
+
+/* Reseteo y estilos base del body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111018;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Contenedor principal del área de juego */
+.area {
+    position: relative;
+    width: 850px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(26, 31, 58, 0.7);
+    padding: 15px;
+    border-radius: var(--radio-borde);
+    box-shadow: 0 8px 32px var(--color-sombra);
+    backdrop-filter: blur(10px);
+}
+
+/* Canvas del juego */
+#lienzo {
+    border-radius: var(--radio-borde);
+    box-shadow: 0 0 30px #198b4f;
+    background: #1ad677;
+}
+
+/* Panel de información superior */
+#panelInfo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-around;
+    background: #13241a;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* Cada item de información (puntaje, vidas, etc.) */
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Etiquetas de los items de información */
+.etiqueta {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Valores numéricos de información */
+.valor {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-acento);
+    text-shadow: 0 0 10px var(--color-sombra);
+}
+
+/* Pantallas de overlay (inicio, pausa, game over, victoria) */
+.pantalla-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 14, 39, 0.95);
+    padding: 40px 60px;
+    border-radius: var(--radio-borde);
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--color-acento);
+    z-index: 1000;
+}
+
+/* Títulos en las pantallas overlay */
+.pantalla-overlay h1 {
+    color: var(--color-acento);
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    text-shadow: 0 0 20px var(--color-sombra);
+    letter-spacing: 3px;
+}
+
+/* Párrafos en las pantallas overlay */
+.pantalla-overlay p {
+    color: var(--color-texto);
+    font-size: 18px;
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+/* Botones del juego */
+.boton {
+    background: var(--color-acento);
+    color: var(--color-fondo-principal);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px var(--color-sombra);
+}
+
+/* Efecto hover en botones */
+.boton:hover {
+    background: var(--color-acento-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--color-sombra);
+}
+
+/* Efecto al hacer clic en botones */
+.boton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px var(--color-sombra);
+}
+
+/* Clase para ocultar elementos */
+.oculto {
+    display: none !important;
+}
+
+/* Animación de aparición para las pantallas */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Aplicar animación a pantallas overlay cuando aparecen */
+.pantalla-overlay:not(.oculto) {
+    animation: aparecer 0.3s ease-out;
+}
+
+
+

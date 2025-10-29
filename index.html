@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="area" role="application" aria-label="Breakout canvas">
+        <canvas id="lienzo" width="800" height="600"></canvas>
+    </div>
+
+    <!-- Cancion Balatrosa -->
+    <audio id="musicaFondo" loop>
+        <source src="sound/Balatro.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Sonidos de ladrillos -->
+    <audio id="sonidoRotura1">
+        <source src="sound/break1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sonidoRotura2">
+        <source src="sound/break2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sonidoRotura3">
+        <source src="sound/break3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/juego.js"></script>
+</body>
+
+</html>
