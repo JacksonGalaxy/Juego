@@ -52,24 +52,13 @@ Juego clásico de Breakout desarrollado con HTML5 Canvas y JavaScript
     ├── break1.mp3
     ├── break2.mp3
     ├── break3.mp3
-    ├── gameover.mp3
-    └── victory.mp3
-```
 
-## 🚀 Instalación
-
-1. Clona o descarga el repositorio
-2. Agrega los archivos de audio en la carpeta `sound/`
-3. Abre `index.html` en tu navegador
-
-¡No requiere servidor ni dependencias externas!
+``
 
 ## 🎵 Archivos de Audio Requeridos
 
 - `Balatro.mp3` - Música de fondo
 - `break1.mp3`, `break2.mp3`, `break3.mp3` - Sonidos de rotura
-- `gameover.mp3` - Sonido de derrota
-- `victory.mp3` - Sonido de victoria
 
 ## 🔧 Personalización
 
